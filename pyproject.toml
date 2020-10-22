@@ -6,9 +6,10 @@ authors = ["Andrey Ryabinov"]
 packages = [{include = "brain_games" },]
 
 [tool.poetry.dependencies]
-python = "3.8"
+python = "3.8.6"
 
 [tool.poetry.dev-dependencies]
+pylint = "^2.6.0"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
