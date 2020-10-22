@@ -1,1 +1,0 @@
-NAME = 'brain_games'
