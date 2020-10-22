@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
-import cli
+from brain_games.scripts.cli import welcome_user
+
 def main():
-    cli.welcome_user()
+    welcome_user()
   
 if __name__ == "__main__":
     main()
