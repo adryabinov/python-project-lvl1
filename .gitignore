@@ -4,6 +4,7 @@ poetry.lock
 pyp1.code-workspace
 .DS_Store
 brain_games/.DS_Store
-brain_games/__pycache__/__init__.cpython-38.pyc
 brain_games/scripts/.DS_Store
-brain_games/scripts/__pycache__/brain_games.cpython-38.pyc
+*.pyc
+dist/hexlet_code-0.1.0-py3-none-any.whl
+*.tar.gz
