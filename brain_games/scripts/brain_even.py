@@ -10,7 +10,7 @@ def make_game():
         qestion_answer = 'yes'
     else:
         qestion_answer = 'no'
-    return (qestion_number , qestion_answer)
+    return (str(qestion_number) , qestion_answer)
 
 
 def main():
