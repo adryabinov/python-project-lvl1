@@ -5,7 +5,7 @@ import prompt, random
 
 game_rules_string = 'Answer "yes" if the number is even, otherwise answer "no".'
 win_message = 'Correct!'
-loose_message = "is wrong answer ;(. Correct answer was 'no'./nLet's try again, Bill!" 
+loose_message = "is wrong answer ;(. Correct answer was 'no'.\nLet's try again, Bill!" 
 
 def make_game():
     qestion_number = random.randrange(1000)
@@ -23,7 +23,7 @@ def user_game_dialog(game):
     if user_answer == answer:
         print(win_message)
     else:
-        print("'" + answer + "'", loose_message)
+        print("'" + user_answer + "'", loose_message)
 
 
 
