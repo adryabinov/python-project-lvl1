@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hexlet project check
-        uses: hexlet/project-action@releasename:
+        uses: hexlet/project-action@release
 
       - name: Set up Python
         uses: actions/setup-python@v1
@@ -23,9 +23,4 @@ jobs:
         run: pip install black flake8
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Enable linters
-          black: true
-          flake8: true
+        run: make lint
