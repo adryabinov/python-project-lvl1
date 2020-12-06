@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
-def make_game(seed):
-    question_number = seed
+def make_game(seed=random.random()):
+    """seed = random return: TODO: game rule, qestion string, answer,"""
+    
+    question_number = int(seed*1000)
     
 
     if question_number % 2 == 0:
