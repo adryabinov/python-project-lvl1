@@ -31,4 +31,5 @@ def runner(game_maker):
             rounds_left = rounds_left + 1
         else:
             return False
+    print("Congratulations, " + user_name + "!" )
     return True
