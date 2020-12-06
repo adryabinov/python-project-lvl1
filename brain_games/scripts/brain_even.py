@@ -11,7 +11,7 @@ def game_iteration(game, user_name):
     (question, answer) = game
     game_rules_string = 'Answer "yes" if the number is even, otherwise answer "no".'
     win_message = 'Correct!'
-    loose_message = "is wrong answer ;(. Correct answer was " + answer + ".\nLet's try again, " + user_name + "!"
+    loose_message = "is wrong answer ;(. Correct answer was \"" + answer + "\".\nLet's try again, " + user_name + "!"
 
     print(game_rules_string)
     print('Question:', question)
@@ -20,7 +20,7 @@ def game_iteration(game, user_name):
         print(win_message)
         return True
     else:
-        print("'" + user_answer + "'", loose_message)
+        print("\"" + user_answer + "\"", loose_message)
         return False
 
 
