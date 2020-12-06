@@ -4,15 +4,7 @@
 import prompt
 import random
 from brain_games.games.game_even import make_game
-
-
-def welcome_user():
-    """GET user name and say HI, RETURN INPUT STR (NAME)"""
-
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello, ' + name + '!')
-    return name
+from brain_games.run.welcome_user import welcome_user
 
 
 def game_iteration(game, user_name):
