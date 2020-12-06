@@ -16,4 +16,4 @@ package-install:
 brain-games:
 	poetry run brain-games
 
-.PHONY: lint build install brain-games
+.PHONY: lint build install publish brain-games
