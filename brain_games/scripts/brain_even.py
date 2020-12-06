@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
 
-import prompt, random
+import prompt
+import random
 
 
 def welcome_user():
-    """GET user name and say HI"""
+    """GET user name and say HI, RETURN INPUT STR (NAME)"""
 
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
@@ -14,23 +15,23 @@ def welcome_user():
 
 
 def make_game():
-    qestion_number = random.randrange(1000)
+    question_number = random.randrange(1000)
 
-    if qestion_number % 2 == 0:
-        qestion_answer = 'yes'
+    if question_number % 2 == 0:
+        question_answer = 'yes'
     else:
-        qestion_answer = 'no'
-    return (str(qestion_number), qestion_answer)
+        question_answer = 'no'
+    return str(question_number), question_answer
 
 
 def game_iteration(game, user_name):
-    (qestion, answer) = game
+    (question, answer) = game
     game_rules_string = 'Answer "yes" if the number is even, otherwise answer "no".'
     win_message = 'Correct!'
     loose_message = "is wrong answer ;(. Correct answer was 'no'.\nLet's try again, " + user_name + "!"
 
     print(game_rules_string)
-    print('Question:', qestion)
+    print('Question:', question)
     user_answer = prompt.string('Your answer: ')
     if user_answer == answer:
         print(win_message)
@@ -46,10 +47,10 @@ def main():
 
     while rounds_to_win > 0:
         game = game_iteration(make_game(), user_name)
-        if game == False:
-            return False
-        else:
+        if game:
             rounds_to_win = rounds_to_win - 1
+        else:
+            return False
     return True
 
 
