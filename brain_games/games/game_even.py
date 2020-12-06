@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+import random
+
 
 def make_game(seed=random.random()):
     """seed = random return: TODO: game rule, qestion string, answer,"""
-    
+
     question_number = int(seed*1000)
     
 

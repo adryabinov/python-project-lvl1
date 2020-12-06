@@ -28,7 +28,7 @@ def runner(game_maker):
     while rounds_left < ROUNDS_TO_WIN:
         game = game_iteration(game_maker(random.random()), user_name)
         if game:
-            rounds_left += rounds_left
+            rounds_left = rounds_left + 1
         else:
             return False
     return True
