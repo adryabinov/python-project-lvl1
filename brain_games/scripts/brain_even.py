@@ -3,6 +3,7 @@
 
 import prompt
 import random
+from brain_games.games.game_even import make_game
 
 
 def welcome_user():
@@ -12,16 +13,6 @@ def welcome_user():
     name = prompt.string('May I have your name? ')
     print('Hello, ' + name + '!')
     return name
-
-
-def make_game():
-    question_number = random.randrange(1000)
-
-    if question_number % 2 == 0:
-        question_answer = 'yes'
-    else:
-        question_answer = 'no'
-    return str(question_number), question_answer
 
 
 def game_iteration(game, user_name):
@@ -46,7 +37,7 @@ def main():
     rounds_to_win = 3
 
     while rounds_to_win > 0:
-        game = game_iteration(make_game(), user_name)
+        game = game_iteration(make_game(random.randrange(1000)), user_name)
         if game:
             rounds_to_win = rounds_to_win - 1
         else:
