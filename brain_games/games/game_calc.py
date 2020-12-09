@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 import random
 
+GAME_RULE = "calc rule: TODO REWRITE"
 
 def make_game(seed=random.random()):
     """seed = random return: TODO: game rule, qestion string, answer,"""
-    game_rules = "calc rule: TODO REWRITE"
     first_number = int(seed * 10)
     second_number = int((seed * 100) % 10)
     operator_seed = int((seed * 1000) % 10)
@@ -21,5 +21,5 @@ def make_game(seed=random.random()):
 
 
     question = str.format('{} {} {}', first_number, operator, second_number)
-    return str(question), str(answer), str(game_rules)
+    return str(question), str(answer)
 

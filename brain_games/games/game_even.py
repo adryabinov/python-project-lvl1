@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 import random
 
+GAME_RULE = "even rule: TODO REWRITE"
 
 def make_game(seed=random.random()):
     """seed = random return: TODO: game rule, qestion string, answer,"""
-    game_rules = "even rule: TODO REWRITE"
-    question_number = int(seed*1000)
+    
+    question = int(seed*1000)
     
 
-    if question_number % 2 == 0:
-        question_answer = 'yes'
+    if question % 2 == 0:
+        answer = 'yes'
     else:
-        question_answer = 'no'
-    return str(question_number), question_answer, game_rules
+        answer = 'no'
+    return str(question), str(answer) 
