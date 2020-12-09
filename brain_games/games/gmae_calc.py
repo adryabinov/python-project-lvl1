@@ -7,7 +7,7 @@ def make_game(seed=random.random()):
     game_rules = "calc rule: TODO REWRITE"
     first_number = int(seed * 10)
     second_number = int((seed * 100) % 10)
-    operator_seed = int((seed * 1000) % 100 // 10)
+    operator_seed = int((seed * 1000) % 10)
 
     if operator_seed == (0 | 1 | 2 | 3 ):
         operator = "+"
