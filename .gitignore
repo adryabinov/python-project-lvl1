@@ -14,4 +14,4 @@ dist/hexlet_code-0.1.0-py3-none-any.whl
 .idea/python-project-lvl1.iml
 .idea/vcs.xml
 .idea/inspectionProfiles/profiles_settings.xml
-dist/hexlet_code-0.1.1-py3-none-any.whl
+dist/*
