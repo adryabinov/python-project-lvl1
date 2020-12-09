@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+#TODO: reformat strings (remove concat), check style
+
 import random
 import prompt
 from brain_games.run.welcome_user import welcome_user
