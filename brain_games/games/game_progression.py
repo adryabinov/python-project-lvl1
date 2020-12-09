@@ -7,7 +7,7 @@ def make_game(seed=random.random()):
     game_rules = "rule_progression:TODO REWRITE"
     first_item = int(seed * 10)
     step = int((seed * 100) % 10)
-    qestion_item_position = int((seed * 1000) % 100 // 10)
+    qestion_item_position = int((seed * 1000) % 10)
     progression = []
 
     for i in range(10):
