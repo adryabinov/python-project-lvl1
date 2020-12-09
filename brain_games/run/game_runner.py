@@ -5,12 +5,11 @@ import prompt
 from brain_games.run.welcome_user import welcome_user
 
 def game_iteration(game, user_name):
-    (question, answer) = game
-    game_rules_string = 'Answer "yes" if the number is even, otherwise answer "no".'
+    (question, answer, game_rules) = game
     win_message = 'Correct!'
     loose_message = "is wrong answer ;(. Correct answer was \"" + answer + "\".\nLet's try again, " + user_name + "!"
 
-    print(game_rules_string)
+    print(game_rules)
     print('Question:', question)
     user_answer = prompt.string('Your answer: ')
     if user_answer == answer:
