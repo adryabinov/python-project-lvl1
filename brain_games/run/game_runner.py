@@ -7,7 +7,7 @@ from brain_games.run.welcome_user import welcome_user
 def game_iteration(game, user_name):
     (question, answer, game_rules) = game
     win_message = 'Correct!'
-    loose_message = "is wrong answer ;(. Correct answer was \"" + answer + "\".\nLet's try again, " + user_name + "!"
+    lose_message = "is wrong answer ;(. Correct answer was \"" + answer + "\".\nLet's try again, " + user_name + "!"
 
     print(game_rules)
     print('Question:', question)
@@ -16,7 +16,7 @@ def game_iteration(game, user_name):
         print(win_message)
         return True
     else:
-        print("\"" + user_answer + "\"", loose_message)
+        print("\"" + user_answer + "\"", lose_message)
         return False
 
 def runner(game_maker):
