@@ -29,5 +29,5 @@ def runner(game_maker, rules):
             rounds_left = rounds_left + 1
         else:
             return False
-    print(str.format('Congratulations, "{}"!', user_name))
+    print(str.format('Congratulations, {}!', user_name))
     return True
