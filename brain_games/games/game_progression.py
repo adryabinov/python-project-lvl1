@@ -14,7 +14,7 @@ def make_game(seed=random.random()):
         progression.append(first_item + (step * i))
         
     answer = progression[question_item_position]
-    progression[qestion_item_position] = '...'
+    progression[question_item_position] = '...'
     question = ' '.join([str(elem) for elem in progression])
 
     return str(question), str(answer)
