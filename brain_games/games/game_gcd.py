@@ -2,10 +2,9 @@
 import random
 
 PRIME_11 = [1, 2, 3, 5, 7, 11, 13, 17, 73, 79]
-GAME_RULE = "gcd rule: TODO REWRITE"
+GAME_RULE = 'Find the greatest common divisor of given numbers.'
 
 def make_game(seed=random.random()):
-    """seed = random return: TODO: game rule, qestion string, answer,"""
     first_pos = int(seed * 10)
     second_pos = int((seed * 100) % 10)
 
@@ -13,6 +12,6 @@ def make_game(seed=random.random()):
         second_pos += 1
 
     num = int((seed * 1000) % 10) + 1 #1-10
-    question = str.format("{} {}", num * PRIME_11[first_pos], num * PRIME_11[second_pos])
+    question = str.format('{} {}', num * PRIME_11[first_pos], num * PRIME_11[second_pos])
     answer = num
     return str(question), str(answer)

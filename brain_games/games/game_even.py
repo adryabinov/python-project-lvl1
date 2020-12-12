@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 import random
 
-GAME_RULE = "even rule: TODO REWRITE"
+GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 def make_game(seed=random.random()):
-    """seed = random return: TODO: game rule, qestion string, answer,"""
     
     question = int(seed*1000)
     

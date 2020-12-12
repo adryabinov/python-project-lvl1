@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import random
 
-GAME_RULE = "rule_progression:TODO REWRITE"
+GAME_RULE = 'What number is missing in the progression?'
 
 def make_game(seed=random.random()):
     """seed = random return: TODO: qestion output format, game rule"""
@@ -14,7 +14,7 @@ def make_game(seed=random.random()):
         progression.append(first_item + (step * i))
         
     answer = progression[qestion_item_position]
-    progression[qestion_item_position] = "..."
-    question = str(progression)
-    
+    progression[qestion_item_position] = '...'
+    question = ' '.join([str(elem) for elem in progression])
+
     return str(question), str(answer)

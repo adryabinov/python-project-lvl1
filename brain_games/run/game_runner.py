@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-#TODO: reformat strings (remove concat), check style
-
 import random
 import prompt
 from brain_games.run.welcome_user import welcome_user
@@ -9,15 +7,15 @@ from brain_games.run.welcome_user import welcome_user
 def game_iteration(game, user_name):
     (question, answer) = game
     win_message = 'Correct!'
-    lose_message = "is wrong answer ;(. Correct answer was \"" + answer + "\".\nLet's try again, " + user_name + "!"
+    lose_message = str.format('is wrong answer ;(. Correct answer was "{}".\nLet\'s try again,  {}!', answer, user_name)
 
-    print('Question:', question)
+    print(str.format('Question: {}', question))
     user_answer = prompt.string('Your answer: ')
     if user_answer == answer:
         print(win_message)
         return True
     else:
-        print("\"" + user_answer + "\"", lose_message)
+        print(str.format('"{}" {}', user_answer, lose_message))
         return False
 
 def runner(game_maker, rules):
@@ -31,5 +29,5 @@ def runner(game_maker, rules):
             rounds_left = rounds_left + 1
         else:
             return False
-    print("Congratulations, " + user_name + "!" )
+    print(str.format('Congratulations, "{}"!', user_name))
     return True
