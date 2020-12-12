@@ -7,7 +7,7 @@ from brain_games.run.welcome_user import welcome_user
 def game_iteration(game, user_name):
     (question, answer) = game
     win_message = 'Correct!'
-    lose_message = str.format('is wrong answer ;(. Correct answer was "{}".\nLet\'s try again,  {}!', answer, user_name)
+    lose_message = str.format('is wrong answer ;(. Correct answer was "{}".\nLet\'s try again, {}!', answer, user_name)
 
     print(str.format('Question: {}', question))
     user_answer = prompt.string('Your answer: ')
