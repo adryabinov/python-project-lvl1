@@ -4,7 +4,6 @@ import random
 GAME_RULE = 'What number is missing in the progression?'
 
 def make_game(seed=random.random()):
-    """seed = random return: TODO: qestion output format, game rule"""
     first_item = int(seed * 10)
     step = int((seed * 100) % 10)
     question_item_position = int((seed * 1000) % 10)
