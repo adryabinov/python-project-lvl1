@@ -12,8 +12,8 @@ def game_iteration(game, user_name):
 
     win_message = 'Correct!'
     lose_message_form = 'is wrong answer ;(. \
-                        Correct answer was "{}".\
-                        \nLet\'s try again, {}!'
+Correct answer was "{}".\
+\nLet\'s try again, {}!'
 
     lose_message = str.format(lose_message_form, answer, user_name)
 
