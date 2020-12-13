@@ -2,12 +2,20 @@
 
 import random
 import prompt
+
 from brain_games.run.welcome_user import welcome_user
 
+
 def game_iteration(game, user_name):
+
     (question, answer) = game
+
     win_message = 'Correct!'
-    lose_message = str.format('is wrong answer ;(. Correct answer was "{}".\nLet\'s try again, {}!', answer, user_name)
+    lose_message_form = 'is wrong answer ;(. \
+                        Correct answer was "{}".\
+                        \nLet\'s try again, {}!'
+
+    lose_message = str.format(lose_message_form, answer, user_name)
 
     print(str.format('Question: {}', question))
     user_answer = prompt.string('Your answer: ')
@@ -17,6 +25,7 @@ def game_iteration(game, user_name):
     else:
         print(str.format('"{}" {}', user_answer, lose_message))
         return False
+
 
 def runner(game_maker, rules):
     user_name = welcome_user()
