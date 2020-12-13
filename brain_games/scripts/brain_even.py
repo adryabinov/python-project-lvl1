@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 
-
-import prompt
-import random
-
 from brain_games.games.game_even import make_game
 from brain_games.games.game_even import GAME_RULE
 
