@@ -8,7 +8,7 @@ GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def make_game(seed=random.random()):
 
-    question = int(seed * 10)
+    question = int(seed * 100)
 
     if question in PRIME_BEFORE_100:
         answer = 'yes'
