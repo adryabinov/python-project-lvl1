@@ -7,3 +7,4 @@ https://asciinema.org/a/B0XjzxjeVE3fNx7PBPQjKQixh
 
 brain-even:
 https://asciinema.org/a/mJc2PJHD4ZlfJRUyxEbKR5Xz5
+<script id="asciicast-mJc2PJHD4ZlfJRUyxEbKR5Xz5" src="https://asciinema.org/a/mJc2PJHD4ZlfJRUyxEbKR5Xz5.js" async></script>
