@@ -9,10 +9,6 @@ packages = [{include = "brain_games" },]
 python = "3.8.6"
 prompt = "^0.4.1"
 
-[tool.poetry.dev-dependencies]
-pylint = "^2.6.0"
-wemake-python-styleguide = "^0.14.1"
-
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
@@ -21,11 +17,9 @@ brain-gcd = "brain_games.scripts.brain_gcd:main"
 brain-calc = "brain_games.scripts.brain_calc:main"
 brain-prime = "brain_games.scripts.brain_prime:main"
 
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.4"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[[tool.poetry.source]]
-name = "foo"
-url = "https://test.pypi.org/legacy/"
-default = true
