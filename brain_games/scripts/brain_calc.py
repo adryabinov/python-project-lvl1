@@ -2,9 +2,8 @@
 
 from brain_games.games.game_calc import make_game
 from brain_games.games.game_calc import GAME_RULE
-from brain_games.run.welcome_user import welcome_user
+
 from brain_games.run.game_runner import runner
-from brain_games.run.game_runner import game_iteration
 
 
 def main():
