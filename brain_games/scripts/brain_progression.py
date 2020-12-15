@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 
-from brain_games.games.game_progression import make_game
-from brain_games.games.game_progression import GAME_RULE
-
-from brain_games.run.game_runner import runner
+from brain_games.games.game_progression import run
 
 
 def main():
-    runner(make_game, GAME_RULE)
+    run()
 
 
 if __name__ == '__main__':

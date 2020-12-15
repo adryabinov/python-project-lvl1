@@ -1,21 +1,29 @@
 #!/usr/bin/env python
 import random
+from brain_games.run.game_runner import run_game
 
-GAME_RULE = 'What number is missing in the progression?'
+GAME_RULES = 'What number is missing in the progression?'
 
-
-def make_game(seed=random.random()):
-
-    first_item = int(seed * 10)
-    step = int((seed * 100) % 10)
-    question_item_position = int((seed * 1000) % 10)
+def make_progression_arr(start, step):
     progression = []
 
     for i in range(10):
-        progression.append(first_item + (step * i))
+        progression.append(start + (step * i))
+    return progression
 
-    answer = progression[question_item_position]
+def generate_round():
+
+    first_item = random.randint(1, 10)
+    step = random.randint(1, 10)
+    question_item_position = random.randint(0, 9)
+    progression = make_progression_arr(first_item, step)
+
+    answer = str(progression[question_item_position])
     progression[question_item_position] = '...'
     question = ' '.join([str(elem) for elem in progression])
 
-    return str(question), str(answer)
+    return question, answer
+
+
+def run():
+    run_game(generate_round,GAME_RULES)

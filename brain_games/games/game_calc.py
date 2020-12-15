@@ -1,26 +1,25 @@
-#!/usr/bin/env python
-
 import random
+from brain_games.run.game_runner import run_game
 
 GAME_RULE = 'What is the result of the expression?'
 
-
-def make_game(seed=random.random()):
-
-    first_number = int(seed * 10)
-    second_number = int((seed * 100) % 10)
-    operator_seed = int((seed * 1000) % 10)
-
-    if operator_seed == (0 | 1 | 2 | 3):
-        operator = '+'
-        answer = first_number + second_number
-    elif operator_seed == (4 | 5 | 6 | 7):
-        operator = '-'
-        answer = first_number - second_number
+def calculate(first_int, second_int, operator):
+    if operator == '+': 
+        return first_int + second_int
+    elif operator == '-':
+        return first_int - second_int
     else:
-        operator = '*'
-        answer = first_number * second_number
+        return first_int * second_int
 
-    question = str.format('{} {} {}', first_number, operator, second_number)
+def generate_round():
 
-    return str(question), str(answer)
+    first_number = random.randint(1,10)
+    second_number = random.randint(1,10)
+    operator = random.choice(['+','-','*'])
+
+    question = (F'{first_number} {operator} {second_number}')
+    answer = calculate(first_number, second_number, operator)
+    return question, str(answer)
+
+def run():
+    run_game(generate_round, GAME_RULE)

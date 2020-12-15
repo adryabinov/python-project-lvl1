@@ -1,42 +1,40 @@
-#!/usr/bin/env python
-
-import random
 import prompt
 
-from brain_games.run.welcome_user import welcome_user
+
+def welcome_user__get_username():
+
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(F'Hello, {name}!')
+    return name
 
 
-def game_iteration(game, user_name):
+def run_round__is_win(round, user_name):
 
-    (question, answer) = game
+    (question, answer) = round()
+    WIN_ROUND_MSG = 'Correct!'
+    LOSE_ROUND_MSG = (F'is wrong answer ;(. \
+Correct answer was "{answer}".\n\
+Let\'s try again, {user_name}!')
 
-    win_message = 'Correct!'
-    lose_message_form = 'is wrong answer ;(. \
-Correct answer was "{}".\
-\nLet\'s try again, {}!'
-
-    lose_message = str.format(lose_message_form, answer, user_name)
-
-    print(str.format('Question: {}', question))
+    print(F'Question: {question}')
     user_answer = prompt.string('Your answer: ')
     if user_answer == answer:
-        print(win_message)
+        print(WIN_ROUND_MSG)
         return True
     else:
-        print(str.format('"{}" {}', user_answer, lose_message))
+        print(F'"{user_answer}" {LOSE_ROUND_MSG}')
         return False
 
 
-def runner(game_maker, rules):
-    user_name = welcome_user()
+def run_game(game_round, game_rules):
+
+    USER_NAME = welcome_user__get_username()
     ROUNDS_TO_WIN = 3
-    rounds_left = 0
-    print(rules)
-    while rounds_left < ROUNDS_TO_WIN:
-        game = game_iteration(game_maker(random.random()), user_name)
-        if game:
-            rounds_left = rounds_left + 1
-        else:
-            return False
-    print(str.format('Congratulations, {}!', user_name))
-    return True
+
+    print(game_rules)
+    for _ in range(ROUNDS_TO_WIN):
+        if not run_round__is_win(game_round, USER_NAME): 
+            return
+    print(F'Congratulations, {USER_NAME}!')
+
