@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "hexlet-code"
-version = "0.1.2"
+name = "hexlet_code"
+version = "0.1.0"
 description = ""
 authors = ["Andrey Ryabinov"]
 packages = [{include = "brain_games" },]
