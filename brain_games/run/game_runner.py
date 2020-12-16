@@ -1,12 +1,6 @@
 import prompt
 
-
-def welcome_user__get_username():
-
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(F'Hello, {name}!')
-    return name
+ROUNDS_TO_WIN = 3
 
 
 def run_round__is_win(round, user_name):
@@ -29,12 +23,12 @@ Let\'s try again, {user_name}!')
 
 def run_game(game_round, game_rules):
 
-    USER_NAME = welcome_user__get_username()
-    ROUNDS_TO_WIN = 3
+    print('Welcome to the Brain Games!')
+    user_name = prompt.string('May I have your name? ')
+    print(F'Hello, {user_name}!')
 
     print(game_rules)
     for _ in range(ROUNDS_TO_WIN):
-        if not run_round__is_win(game_round, USER_NAME): 
+        if not run_round__is_win(game_round, user_name): 
             return
-    print(F'Congratulations, {USER_NAME}!')
-
+    print(F'Congratulations, {user_name}!')
