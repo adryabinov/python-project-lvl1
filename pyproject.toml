@@ -3,14 +3,10 @@ name = "hexlet_code"
 version = "0.1.0"
 description = "Set of console math games"
 authors = ["Andrey Ryabinov"]
-license = "Apache-2.0"
+license ="Apache-2.0"
 readme = "readme.md"
 packages = [
-    {include = "brain_calc" },
-    {include = "brain_even" },
-    {include = "brain_gcd" },
-    {include = "brain_prime" },
-    {include = "brain_progression" },
+    {include = "brain_games" },
     ]
 
 [tool.poetry.dependencies]
@@ -18,11 +14,12 @@ python = "3.8.6"
 prompt = "^0.4.1"
 
 [tool.poetry.scripts]
-brain-calc = "brain_games.scripts.brain_calc:main"
 brain-even = "brain_games.scripts.brain_even:main"
-brain-gcd = "brain_games.scripts.brain_gcd:main"
-brain-prime = "brain_games.scripts.brain_prime:main"
 brain-progression = "brain_games.scripts.brain_progression:main"
+brain-gcd = "brain_games.scripts.brain_gcd:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
+brain-prime = "brain_games.scripts.brain_prime:main"
+
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
