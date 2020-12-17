@@ -1,4 +1,3 @@
-import random
 from brain_games.run.game_runner import run_game
 from brain_games.run.functions import generate_above_100
 

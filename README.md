@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 ![Actions Status](https://github.com/adryabinov/python-project-lvl1/workflows/Python%20CI/badge.svg)
 
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/de2749a9445053781649/maintainability)](https://codeclimate.com/github/adryabinov/python-project-lvl1/maintainability)
 
 BRAIN GAMES
 Brain games is a set of math games.
