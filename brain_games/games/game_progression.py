@@ -2,14 +2,18 @@
 import random
 from brain_games.run.game_runner import run_game
 
+
 GAME_RULES = 'What number is missing in the progression?'
 
+
 def make_progression_arr(start, step):
+
     progression = []
 
     for i in range(10):
         progression.append(start + (step * i))
     return progression
+
 
 def generate_round():
 
@@ -26,4 +30,4 @@ def generate_round():
 
 
 def run():
-    run_game(generate_round,GAME_RULES)
+    run_game(generate_round, GAME_RULES)

@@ -29,6 +29,6 @@ def run_game(game_round, game_rules):
 
     print(game_rules)
     for _ in range(ROUNDS_TO_WIN):
-        if not run_round__is_win(game_round, user_name): 
+        if not run_round__is_win(game_round, user_name):
             return
     print(F'Congratulations, {user_name}!')
