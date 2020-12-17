@@ -11,7 +11,7 @@ def is_even(int_number):
 
 def generate_round():
 
-    question = random.randint(1, 100)
+    question = random.randint(1, 1000)
 
     if is_even(question):
         answer = 'yes'

@@ -13,6 +13,7 @@ def is_prime(int_number):
 def generate_round():
 
     question = random.randint(1, 100)
+    
     if is_prime(question):
         answer = 'yes'
     else:
