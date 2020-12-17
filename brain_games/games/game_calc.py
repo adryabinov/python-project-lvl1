@@ -1,5 +1,6 @@
 import random
 from brain_games.run.game_runner import run_game
+from brain_games.run.functions import generate_above_100
 
 
 GAME_RULE = 'What is the result of the expression?'
@@ -16,8 +17,8 @@ def calculate(first_int, second_int, operator):
 
 def generate_round():
 
-    first_number = random.randint(1, 10)
-    second_number = random.randint(1, 10)
+    first_number = generate_above_100()
+    second_number = generate_above_100()
     operator = random.choice(['+', '-', '*'])
 
     question = (F'{first_number} {operator} {second_number}')

@@ -1,5 +1,6 @@
 import random
 from brain_games.run.game_runner import run_game
+from brain_games.run.functions import generate_above_100
 
 
 GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
@@ -12,8 +13,8 @@ def is_prime(int_number):
 
 def generate_round():
 
-    question = random.randint(1, 100)
-    
+    question = generate_above_100()
+
     if is_prime(question):
         answer = 'yes'
     else:
