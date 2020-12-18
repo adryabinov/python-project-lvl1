@@ -1,23 +1,18 @@
-from brain_games.run.game_runner import run_game
-from brain_games.run.functions import generate_above_100
+import random
+from brain_games.engine import run
 
-GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def is_even(int_number):
-    return (int_number % 2 == 0)
+def is_even(number):
+    return number % 2 == 0
 
 
 def generate_round():
-
-    question = generate_above_100()
-
-    if is_even(question):
-        answer = 'yes'
-    else:
-        answer = 'no'
-    return str(question), answer
+    question = str(random.randint(1, 100))
+    answer = 'yes' if is_even(int(question)) else 'no'
+    return question, answer
 
 
-def run():
-    run_game(generate_round, GAME_RULES)
+def run_game():
+    run(generate_round, DESCRIPTION)

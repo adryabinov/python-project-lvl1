@@ -1,33 +1,42 @@
 #!/usr/bin/env python
 import random
-from brain_games.run.game_runner import run_game
+from brain_games.engine import run
 
 
-GAME_RULES = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
+TERM_MASK = '..'
 
 
-def make_progression_arr(start, step):
+def randomize_progression_init():
+    initial_term = random.randint(1, 10)
+    difference = random.randint(1, 10)
+    return initial_term, difference
 
+
+def make_progression_fix_length(initiators, length):
     progression = []
-
-    for i in range(10):
-        progression.append(start + (step * i))
+    initial_term, difference = initiators
+    for i in range(length):
+        progression.append(initial_term + (difference * i))
     return progression
 
 
+def get_masked_elem_list(list, elem_position, mask):
+    return list[:elem_position] + [mask] + list[elem_position + 1:]
+
+
 def generate_round():
-
-    first_item = random.randint(1, 10)
-    step = random.randint(1, 10)
-    question_item_position = random.randint(0, 9)
-    progression = make_progression_arr(first_item, step)
-
-    answer = str(progression[question_item_position])
-    progression[question_item_position] = '...'
-    question = ' '.join([str(elem) for elem in progression])
-
+    progression_length = random.randint(5, 10)
+    random_term_position = random.randint(0, progression_length - 1)
+    progression = make_progression_fix_length(
+        randomize_progression_init(), progression_length)
+    answer = str(progression[random_term_position])
+    question = ' '.join(
+        [str(elem) for elem in get_masked_elem_list(progression,
+                                                    random_term_position,
+                                                    TERM_MASK)])
     return question, answer
 
 
-def run():
-    run_game(generate_round, GAME_RULES)
+def run_game():
+    run(generate_round, DESCRIPTION)

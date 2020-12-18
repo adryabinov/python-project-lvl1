@@ -1,9 +1,9 @@
 import random
-from brain_games.run.game_runner import run_game
-from brain_games.run.functions import generate_above_100
+from brain_games.engine import run
 
 
-GAME_RULE = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
+OPERATORS = ['+', '-', '*']
 
 
 def calculate(first_int, second_int, operator):
@@ -16,15 +16,13 @@ def calculate(first_int, second_int, operator):
 
 
 def generate_round():
-
-    first_number = generate_above_100()
-    second_number = generate_above_100()
-    operator = random.choice(['+', '-', '*'])
-
+    first_number = random.randint(1, 100)
+    second_number = random.randint(1, 100)
+    operator = random.choice(OPERATORS)
     question = (F'{first_number} {operator} {second_number}')
-    answer = calculate(first_number, second_number, operator)
-    return question, str(answer)
+    answer = str(calculate(first_number, second_number, operator))
+    return question, answer
 
 
-def run():
-    run_game(generate_round, GAME_RULE)
+def run_game():
+    run(generate_round, DESCRIPTION)
