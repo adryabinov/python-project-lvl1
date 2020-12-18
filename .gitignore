@@ -1,6 +1,5 @@
 /.venv/*
 /.vscode/*
-*.pyc
-*.tar.gz
 /.idea/*
 /dist/*
+**/__pycache__/*
