@@ -4,11 +4,11 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/de2749a9445053781649/maintainability)](https://codeclimate.com/github/adryabinov/python-project-lvl1/maintainability)
 
-# BRAIN GAMES
+# Brain games
 
 Brain games is a set of math games.
 
-## INSTALLATION
+## Installation
 
 Python packaging and dependency management tool Poetry should be preinstalled.
 
@@ -19,7 +19,7 @@ make package-install
 
 [![asciicast](https://asciinema.org/a/RJtra5SWZ5oKeWcC0jiJvPrWL.svg)](https://asciinema.org/a/RJtra5SWZ5oKeWcC0jiJvPrWL)
 
-## USAGE
+## Usage
 
 Just type a game name in the console to run the game.
 
@@ -59,4 +59,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+[MIT]

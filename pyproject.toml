@@ -3,10 +3,10 @@ name = "hexlet_code"
 version = "0.1.0"
 description = "Set of console math games"
 authors = ["Andrey Ryabinov"]
-license ="Apache-2.0"
+license ="MIT"
 packages = [
     {include = "brain_games" },
-    ]
+]
 
 [tool.poetry.dependencies]
 python = "3.8.6"
