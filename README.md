@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
-[![Python CI](https://github.com/adryabinov/python-project-lvl1/workflows/Python%20CI/badge.svg)](https://github.com/adryabinov/python-project-lvl1/actions?query=workflow%3A%22Python+CI%22\)
+
+[![Python CI](https://github.com/adryabinov/python-project-lvl1/workflows/Python%20CI/badge.svg)](https://github.com/adryabinov/python-project-lvl1/actions)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/de2749a9445053781649/maintainability)](https://codeclimate.com/github/adryabinov/python-project-lvl1/maintainability)
 
