@@ -14,7 +14,8 @@ def run(generate_round, description):
         print(F'Question: {question}')
         user_answer = prompt.string('Your answer: ')
         if not user_answer == answer:
-            print(F'"{user_answer}" is wrong answer ;(. '
+            print(
+                F'"{user_answer}" is wrong answer ;(. '
                 F'Correct answer was "{answer}".\n'
                 F'Let\'s try again, {user_name}!')
             return

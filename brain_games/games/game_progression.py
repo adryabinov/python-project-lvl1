@@ -16,8 +16,10 @@ def generate_progression(length):
     return progression
 
 
-def make_question(progression, elem_position):
-    masked_progression = progression[:elem_position] + [TERM_MASK] + progression[elem_position + 1:] 
+def make_question(progression, position):
+    masked_progression = progression[:position] +\
+                        [TERM_MASK] + \
+                        progression[position + 1:]
     return ' '.join([str(elem) for elem in masked_progression])
 
 

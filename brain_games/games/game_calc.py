@@ -17,7 +17,7 @@ def generate_round():
     operator = random.choice(OPERATORS)
     question = (F'{first_number} {operator} {second_number}')
     answer = str(MAP_OPERATORS_TO_OPERATIONS[operator](
-        first_number, 
+        first_number,
         second_number))
     return question, answer
 
