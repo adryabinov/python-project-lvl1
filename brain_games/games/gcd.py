@@ -9,7 +9,7 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 def generate_round():
     first_number = random.randint(1, 100)
     second_number = random.randint(1, 100)
-    question = (F'{first_number} {second_number}')
+    question = F'{first_number} {second_number}'
     answer = gcd(first_number, second_number)
 
     return question, str(answer)
