@@ -16,10 +16,10 @@ def generate_round():
     second_number = random.randint(1, 10)
     operator = random.choice(OPERATORS)
     question = (F'{first_number} {operator} {second_number}')
-    answer = str(MAP_OPERATORS_TO_OPERATIONS[operator](
+    answer = MAP_OPERATORS_TO_OPERATIONS[operator](
         first_number,
-        second_number))
-    return question, answer
+        second_number)
+    return question, str(answer)
 
 
 def run_game():

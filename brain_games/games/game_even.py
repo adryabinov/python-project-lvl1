@@ -9,9 +9,9 @@ def is_even(number):
 
 
 def generate_round():
-    question = str(random.randint(1, 100))
-    answer = 'yes' if is_even(int(question)) else 'no'
-    return question, answer
+    question = random.randint(1, 100)
+    answer = 'yes' if is_even(question) else 'no'
+    return str(question), answer
 
 
 def run_game():

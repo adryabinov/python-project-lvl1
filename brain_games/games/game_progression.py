@@ -27,9 +27,9 @@ def generate_round():
     progression_length = random.randint(5, 10)
     answer_term_position = random.randint(0, progression_length - 1)
     progression = generate_progression(progression_length)
-    answer = str(progression[answer_term_position])
+    answer = progression[answer_term_position]
     question = make_question(progression, answer_term_position)
-    return question, answer
+    return question, str(answer)
 
 
 def run_game():

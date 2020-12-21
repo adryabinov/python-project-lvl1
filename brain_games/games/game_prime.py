@@ -15,9 +15,9 @@ def is_prime(number):
 
 
 def generate_round():
-    question = str(random.randint(1, 100))
-    answer = 'yes' if is_prime(int(question)) else 'no'
-    return question, answer
+    question = random.randint(1, 100)
+    answer = 'yes' if is_prime(question) else 'no'
+    return str(question), answer
 
 
 def run_game():
