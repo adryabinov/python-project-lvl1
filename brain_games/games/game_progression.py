@@ -7,34 +7,26 @@ DESCRIPTION = 'What number is missing in the progression?'
 TERM_MASK = '..'
 
 
-def randomize_progression_init():
+def generate_progression(length):
     initial_term = random.randint(1, 10)
     difference = random.randint(1, 10)
-    return initial_term, difference
-
-
-def make_progression_fix_length(initiators, length):
     progression = []
-    initial_term, difference = initiators
     for i in range(length):
         progression.append(initial_term + (difference * i))
     return progression
 
 
-def get_masked_elem_list(list, elem_position, mask):
-    return list[:elem_position] + [mask] + list[elem_position + 1:]
+def make_question(progression, elem_position):
+    masked_progression = progression[:elem_position] + [TERM_MASK] + progression[elem_position + 1:] 
+    return ' '.join([str(elem) for elem in masked_progression])
 
 
 def generate_round():
     progression_length = random.randint(5, 10)
-    random_term_position = random.randint(0, progression_length - 1)
-    progression = make_progression_fix_length(
-        randomize_progression_init(), progression_length)
-    answer = str(progression[random_term_position])
-    question = ' '.join(
-        [str(elem) for elem in get_masked_elem_list(progression,
-                                                    random_term_position,
-                                                    TERM_MASK)])
+    answer_term_position = random.randint(0, progression_length - 1)
+    progression = generate_progression(progression_length)
+    answer = str(progression[answer_term_position])
+    question = make_question(progression, answer_term_position)
     return question, answer
 
 
