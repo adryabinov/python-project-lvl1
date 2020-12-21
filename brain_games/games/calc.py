@@ -8,13 +8,12 @@ MAP_OPERATORS_TO_OPERATIONS = {
     '-': lambda x, y: x - y,
     '*': lambda x, y: x * y,
 }
-OPERATORS = list(MAP_OPERATORS_TO_OPERATIONS.keys())
 
 
 def generate_round():
     first_number = random.randint(1, 10)
     second_number = random.randint(1, 10)
-    operator = random.choice(OPERATORS)
+    operator = random.choice(list(MAP_OPERATORS_TO_OPERATIONS.keys()))
     question = F'{first_number} {operator} {second_number}'
     answer = MAP_OPERATORS_TO_OPERATIONS[operator](
         first_number,
